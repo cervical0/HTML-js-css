@@ -1,27 +1,25 @@
-/*
-This is your site JavaScript code - you can add interactivity and carry out processing
-- Initially the JS writes a message to the console, and moves a button you can add from the README
-*/
+var topinput = document.getElementById("TopCaptionInput");
+topinput.addEventListener("change", changeTop);
 
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
-
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the "Next steps" in the README
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-// Detect clicks on the button
-if (btn) {
-  btn.onclick = function() {
-    // The JS works in conjunction with the 'dipped' code in style.css
-    btn.classList.toggle("dipped");
-  };
+function changeTop() {
+  var topinputvalue = document.getElementById("TopCaptionInput").value;
+  document.getElementById("TopCaption").innerHTML = topinputvalue;
 }
 
-// This is a single line JS comment
-/*
-This is a comment that can span multiple lines 
-- use comments to make your own notes!
-*/
+var botinput = document.getElementById("BottomCaptionInput");
+botinput.addEventListener("change", changeBot);
+
+function changeBot(){
+  var botinputvalue = document.getElementById("BottomCaptionImput").value
+  document.getElementById("BottomCaption").innerHTML = botimputvalue;
+}
+
+var fileinput = document.getElementById("fileinput");
+fileinput.addEventListener("change", changeImg);
+
+function changeImg(){
+  var file = document.getElementById("fileinput").files[0];
+  var img = document.getElementById('memebackground')
+  img.src = window.URL.createObjectURL(file);
+}
+
