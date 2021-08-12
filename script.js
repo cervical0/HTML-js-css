@@ -10,8 +10,8 @@ var botinput = document.getElementById("BottomCaptionInput");
 botinput.addEventListener("change", changeBot);
 
 function changeBot(){
-  var botinputvalue = document.getElementById("BottomCaptionImput").value
-  document.getElementById("BottomCaption").innerHTML = botimputvalue;
+  var botinputvalue = document.getElementById("BottomCaptionInput").value
+  document.getElementById("BottomCaption").innerHTML = botinputvalue;
 }
 
 var fileinput = document.getElementById("fileinput");
